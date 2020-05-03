@@ -1,6 +1,93 @@
 @charset "UTF-8";
 /* Body */
 body {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+{
 	font-family: source-sans-pro;
 	background-color: #f2f2f2;
 	margin-top: 0px;
@@ -23,7 +110,7 @@ header {
     width: 100%;
     height: 5%;
     background-color: #FABA23;
-    border-bottom: 1px solid #2C9AB7;
+    border-bottom: 1px solid #771177;
 }
 .logo {
 	color: #fff;
@@ -73,13 +160,13 @@ ul li:hover a {
 }
 /* Hero Section */
 .hero {
-	background-image: image(fleecefabric.jpg);
-	padding-top: 150px;
-	padding-bottom: 150px;
+	background-image: url("images/fleecefabric.jpg");
+	padding-top: 50px;
+	padding-bottom: 350px;
 }
 .light {
 	font-weight: bold;
-	color: #717070;
+	color: #717;
 }
 .tagline {
 	text-align: center;
@@ -108,73 +195,7 @@ ul li:hover a {
 	background-color: #FFFFFF;
 	margin-top: 0px;
 }
-/* Stats Gallery */
-.stats {
-	color: #717070;
-	margin-bottom: 5px;
-}
-.gallery {
-	clear: both;
-	display: inline-block;
-	width: 100%;
-	background-color: #FFFFFF;
-	/* [disabled]min-width: 400px;
-*/
-	padding-bottom: 35px;
-	padding-top: 0px;
-	margin-top: -5px;
-	margin-bottom: 0px;
-}
-.thumbnail {
-	width: 25%;
-	text-align: center;
-	float: left;
-	margin-top: 35px;
-}
-.gallery .thumbnail h4 {
-	margin-top: 5px;
-	margin-right: 5px;
-	margin-bottom: 5px;
-	margin-left: 5px;
-	color: #52BAD5;
-}
-.gallery .thumbnail p {
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	color: #A3A3A3;
-}
-/* Parallax Section */
-.banner {
-	background-color: #2D9AB7;
-	background-image: url(images/parallax.png);
-	height: 400px;
-	background-attachment: fixed;
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-.parallax {
-	color: #FFFFFF;
-	text-align: right;
-	padding-right: 100px;
-	padding-top: 110px;
-	letter-spacing: 2px;
-	margin-top: 0px;
-}
-.parallax_description {
-	color: #FFFFFF;
-	text-align: right;
-	padding-right: 100px;
-	width: 30%;
-	float: right;
-	font-weight: lighter;
-	line-height: 23px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-}
+/*
 /* More info */
 footer {
 	background-color: #FFFFFF;
