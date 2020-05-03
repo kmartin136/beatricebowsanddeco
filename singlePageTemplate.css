@@ -4,13 +4,15 @@ body {
   box-sizing: border-box;
 }
 
-.container {
-  position: relative;
+.container { 
+  position: sticky;
 }
 
 /* Hide the images by default */
 .mySlides {
-  display: none;
+  display: contents;
+	position: relative
+
 }
 
 /* Add a pointer when hovering over the thumbnail images */
@@ -49,10 +51,10 @@ body {
 
 /* Number text (1/3 etc) */
 .numbertext {
-  color: #f2f2f2;
+  color: brown;
   font-size: 12px;
   padding: 8px 12px;
-  position: absolute;
+  position: inherit;
   top: 0;
 }
 
@@ -98,16 +100,16 @@ body {
 }
 /* Container */
 .container {
-	width: 90%;
+	width: 80%;
 	margin-left: auto;
-	margin-right: auto;
-	height: 1000px;
+	margin-right:auto;
+	height: 650px;
 	background-color: #FFFFFF;
 }
 /* Navigation */
 header {
     width: 100%;
-    height: 5%;
+    height: 9%;
     background-color: #FABA23;
     border-bottom: 1px solid #771177;
 }
@@ -169,7 +171,7 @@ ul li:hover a {
 }
 .tagline {
 	text-align: center;
-	color: #FFFFFF;
+	color:#771177;
 	margin-top: 4px;
 	font-weight: lighter;
 	text-transform: uppercase;
